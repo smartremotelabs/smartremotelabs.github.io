@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Homepage -->
+    <url>
+        <loc>https://yourusername.github.io/roku-remote/</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Main Pages -->
+    <url>
+        <loc>https://yourusername.github.io/roku-remote/index.html</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://yourusername.github.io/roku-remote/faq.html</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://yourusername.github.io/roku-remote/contact.html</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://yourusername.github.io/roku-remote/privacy.html</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <url>
+        <loc>https://yourusername.github.io/roku-remote/terms.html</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.5</priority>
+    </url>
+    
+    <!-- Blog Posts -->
+    <url>
+        <loc>https://yourusername.github.io/roku-remote/blog/connect-roku-without-remote.html</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://yourusername.github.io/roku-remote/blog/lost-roku-remote.html</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://yourusername.github.io/roku-remote/blog/roku-remote-not-working.html</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://yourusername.github.io/roku-remote/blog/best-roku-remote-app.html</loc>
+        <lastmod>2026-05-21</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+</urlset>
