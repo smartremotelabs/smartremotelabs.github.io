@@ -11,7 +11,7 @@ User-agent: Bingbot
 Allow: /
 
 # Sitemap location
-Sitemap: https://smartremotelabs.github.io/roku-remote-control/sitemap.xml
+Sitemap: https://smartremotelabs.github.io/sitemap.xml
 
 # Crawl delay (optional - 1 second between requests)
 Crawl-delay: 1
