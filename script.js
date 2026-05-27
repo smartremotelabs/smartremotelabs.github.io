@@ -1,87 +1,16 @@
 // ============================================
-// Smart Roku Remote - Main JavaScript
+// Roku TV Remote Control - Main JavaScript
 // ============================================
 
 // Wait for DOM to be ready
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("Smart Roku Remote website loaded successfully");
+    console.log("Roku TV Remote Control website loaded successfully");
     
     // Initialize all functionality
-    initContactForm();
     initMobileMenu();
     initSmoothScroll();
 });
 
-// ============================================
-// Contact Form Handler
-// ============================================
-
-function initContactForm() {
-    const form = document.getElementById('contact-form');
-    
-    if (!form) return; // Only initialize if contact form exists
-    
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value.trim();
-        const statusElement = document.getElementById('form-status');
-        
-        // Validate form
-        if (!name || !email || !subject || !message) {
-            showFormStatus('Please fill in all fields', 'error', statusElement);
-            return;
-        }
-        
-        // Validate email
-        if (!isValidEmail(email)) {
-            showFormStatus('Please enter a valid email address', 'error', statusElement);
-            return;
-        }
-        
-        // Since this is a static site, we'll show a success message
-        // In production, you'd send this to an email service like Formspree or Emailjs
-        showFormStatus('Thank you for your message! We will get back to you soon.', 'success', statusElement);
-        
-        // Reset form
-        form.reset();
-        
-        // Log to console for demonstration
-        console.log('Form submitted:', { name, email, subject, message });
-        
-        // You can integrate with services like:
-        // - Formspree (https://formspree.io/)
-        // - EmailJS (https://www.emailjs.com/)
-        // - Netlify Forms (if hosted on Netlify)
-    });
-}
-
-function showFormStatus(message, type, element) {
-    if (!element) return;
-    
-    element.textContent = message;
-    element.classList.remove('success', 'error');
-    element.classList.add(type);
-    
-    // Scroll to status message
-    element.scrollIntoView({ behavior: 'smooth' });
-    
-    // Clear after 5 seconds if success
-    if (type === 'success') {
-        setTimeout(() => {
-            element.textContent = '';
-            element.classList.remove('success', 'error');
-        }, 5000);
-    }
-}
-
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
 
 // ============================================
 // Mobile Menu Toggle
