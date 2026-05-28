@@ -136,6 +136,27 @@ ul li, ol li {
 }
 
 /* ============================================
+   GOOGLE PLAY STORE BADGE
+   ============================================ */
+
+.play-store-link {
+    display: inline-block;
+    margin: 1.5rem 0;
+    text-decoration: none;
+}
+
+.play-store-badge {
+    height: 60px;
+    width: auto;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.play-store-link:hover .play-store-badge {
+    transform: translateY(-3px);
+    filter: brightness(1.1);
+}
+
+/* ============================================
    HEADER & NAVIGATION
    ============================================ */
 
@@ -638,11 +659,14 @@ footer {
         text-align: center;
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        visibility: hidden;
+        transition: max-height 0.3s ease, visibility 0.3s ease;
+        z-index: 999;
     }
     
     .nav-links.active {
-        max-height: 300px;
+        max-height: 500px;
+        visibility: visible;
     }
     
     .nav-links a {
@@ -689,6 +713,7 @@ footer {
     .screenshot-grid,
     .features-grid {
         gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .footer-grid {
@@ -725,6 +750,14 @@ footer {
         padding: 0 10px;
     }
     
+    .logo h1 {
+        font-size: 1.1rem;
+    }
+    
+    .logo-icon {
+        height: 32px;
+    }
+    
     .hero-content h2 {
         font-size: 1.4rem;
     }
@@ -751,7 +784,12 @@ footer {
     }
     
     .nav-links {
-        gap: 10px;
+        gap: 0;
+        padding: 15px 20px;
+    }
+    
+    .nav-links a {
+        padding: 12px 0;
     }
 }
 
