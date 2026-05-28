@@ -30,7 +30,12 @@
                 <img src="Icon -no back.png" alt="Roku TV Remote Control" class="logo-icon">
                 <h1><a href="index.html">Roku TV Remote Control</a></h1>
             </div>
-            <ul class="nav-links">
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
                 <li><a href="index.html#features">Features</a></li>
                 <li><a href="index.html#screenshots">Screenshots</a></li>
                 <li><a href="faq.html" class="active">FAQ</a></li>
@@ -369,6 +374,26 @@
         <p>Roku is a trademark of Roku Inc. We are not affiliated with Roku Inc.</p>
     </div>
 </footer>
+
+<!-- Mobile Menu Toggle Script -->
+<script>
+  // Hamburger menu toggle for mobile
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  
+  navToggle.addEventListener('click', function() {
+    navToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
+  
+  // Close menu when a link is clicked
+  navLinks.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') {
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('active');
+    }
+  });
+</script>
 
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
