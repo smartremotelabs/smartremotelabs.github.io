@@ -918,6 +918,29 @@ footer {
     border-top: 1px solid var(--border-color);
 }
 
+.blog-figure {
+    margin: 2.5rem 0;
+    text-align: center;
+}
+
+.blog-figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--border-color);
+    width: 40%;
+    margin: 0 auto;
+    display: block;
+}
+
+.blog-figure figcaption {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
 .blog-listing-section {
     padding: 80px 0;
     background: var(--white);
