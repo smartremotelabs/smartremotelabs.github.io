@@ -157,6 +157,37 @@ ul li, ol li {
 }
 
 /* ============================================
+   VIDEO EMBED (YouTube Shorts - vertical)
+   Responsive container for 9:16 vertical videos
+   ============================================ */
+
+.video-embed.vertical-short {
+    width: 100%;
+    max-width: 420px;
+    margin: 1.25rem auto;
+    position: relative;
+    aspect-ratio: 9 / 16;
+}
+
+.video-embed.vertical-short::before {
+    /* Fallback for browsers without aspect-ratio support */
+    content: "";
+    display: block;
+    padding-top: 177.78%; /* (16/9)*100% to create 9:16 vertical */
+}
+
+.video-embed.vertical-short iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+}
+
+/* ============================================
    HEADER & NAVIGATION
    ============================================ */
 
