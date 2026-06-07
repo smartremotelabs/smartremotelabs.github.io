@@ -60,6 +60,14 @@ h2 {
     text-align: left;
 }
 
+/* Center specific H2s used on the homepage and call-to-action areas */
+.hero h2,
+.cta h2,
+.seo-section h2,
+.newsletter-section h2 {
+    text-align: center;
+}
+
 h3 {
     font-size: 1.3rem;
 }
@@ -154,6 +162,106 @@ ul li, ol li {
 .play-store-link:hover .play-store-badge {
     transform: translateY(-3px);
     filter: brightness(1.1);
+}
+
+/* ============================================
+   APP DOWNLOAD BLOCK
+   Layout for app icon + name + Play Store badge
+   ============================================ */
+
+.app-download {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 1rem 0 1.5rem;
+    max-width: 620px;
+    width: 100%;
+    justify-content: center; /* center-align block contents */
+    color: var(--text-dark); /* default text color for light backgrounds */
+}
+
+.app-download .app-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.app-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    text-align: left;
+}
+
+.app-name {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: inherit; /* inherit so dark or light backgrounds work */
+}
+
+.app-sub {
+    font-size: 0.95rem;
+    color: rgba(0,0,0,0.6); /* default subtle dark */
+}
+
+.app-download .play-store-link {
+    margin-left: 0; /* center layout — no auto margin */
+}
+
+@media (max-width: 600px) {
+    .app-download {
+        gap: 12px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .app-download .app-icon {
+        width: 56px;
+        height: 56px;
+    }
+    .play-store-badge {
+        height: 52px;
+    }
+}
+
+/* Dark background adjustments: make text readable on dark sections */
+.hero .app-download,
+.cta .app-download,
+header + .container .app-download {
+    color: var(--white);
+}
+
+.hero .app-download .app-sub,
+.cta .app-download .app-sub,
+header + .container .app-download .app-sub {
+    color: rgba(255,255,255,0.85);
+}
+
+/* Slight icon border tweak on dark backgrounds */
+.hero .app-download .app-icon,
+.cta .app-download .app-icon {
+    border-color: rgba(255,255,255,0.12);
+}
+
+/* Center app-info text inside hero/cta/seo/footer for visual alignment */
+.hero .app-download .app-info,
+.cta .app-download .app-info,
+.seo-section .app-download .app-info,
+.footer .app-download .app-info,
+.container > .app-download .app-info {
+    text-align: center;
+}
+
+/* Ensure app-download blocks are centered horizontally in various sections */
+.hero .app-download,
+.cta .app-download,
+.seo-section .app-download,
+.footer .app-download,
+.container > .app-download {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* ============================================
