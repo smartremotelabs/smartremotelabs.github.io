@@ -302,7 +302,7 @@ header + .container .app-download .app-sub {
 header {
     background: var(--secondary-color);
     color: var(--white);
-    padding: 0px 0; /* further reduce vertical padding to tighten navbar */
+    padding: 2px 0; /* further reduce vertical padding to tighten navbar */
     position: sticky;
     top: 0;
     z-index: 1000;
