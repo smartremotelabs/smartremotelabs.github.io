@@ -302,7 +302,7 @@ header + .container .app-download .app-sub {
 header {
     background: var(--secondary-color);
     color: var(--white);
-    padding: 15px 0;
+    padding: 0px 0; /* further reduce vertical padding to tighten navbar */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -353,7 +353,7 @@ header {
 }
 
 .logo-icon {
-    height: 40px;
+    height: 20px; /* slightly smaller to match reduced header */
     width: auto;
     border-radius: 4px;
 }
@@ -376,7 +376,7 @@ header {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 30px;
+    gap: 20px; /* slightly smaller gap to compact nav */
 }
 
 .nav-links a {
@@ -384,6 +384,39 @@ header {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    line-height: 1; /* prevent extra vertical spacing */
+    padding: 4px 0; /* small vertical padding for touch targets */
+}
+
+/* Play Store badge visible in header (desktop) and inside mobile menu when opened */
+.nav .nav-play-link {
+    margin-left: 16px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.nav-play-badge {
+    height: 36px; /* reduced for visual balance */
+    width: auto;
+    transition: transform 0.2s ease;
+}
+
+.nav-play-link:hover .nav-play-badge { transform: translateY(-2px); }
+
+@media (max-width: 800px) {
+    /* Hide the header badge on smaller screens by default to save space */
+    .nav .nav-play-link {
+        display: none;
+    }
+    /* When the mobile nav is active, show the badge so users can access it in the menu */
+    .nav-links.active ~ .nav-play-link {
+        display: inline-flex;
+        margin-top: 12px; /* space within menu */
+    }
+
+    .nav-play-badge { height: 36px; }
 }
 
 .nav-links a:hover,
