@@ -1225,3 +1225,10 @@ footer {
 .newsletter-form button {
     min-width: 150px;
 }
+
+/* Increase logo icon on desktop to match Play Store badge height */
+@media (min-width: 801px) {
+    .logo-icon {
+        height: 36px; /* match .nav-play-badge height on desktop */
+    }
+}

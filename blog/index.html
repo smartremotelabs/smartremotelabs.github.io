@@ -258,6 +258,39 @@
   });
 </script>
 
+<!-- Make entire blog card clickable (keyboard accessible) -->
+<script>
+    (function() {
+        const cards = document.querySelectorAll('.blog-card');
+        cards.forEach(card => {
+            const titleLink = card.querySelector('h2 a');
+            if (!titleLink) return;
+            const href = titleLink.href;
+            const titleText = titleLink.textContent.trim();
+
+            // Make card focusable and announceable
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('role', 'link');
+            card.setAttribute('aria-label', `Read "${titleText}"`);
+            card.style.cursor = 'pointer';
+
+            // Click handler: ignore clicks on inner interactive elements (links, buttons, inputs)
+            card.addEventListener('click', function(e) {
+                if (e.target.closest('a, button, input, textarea, select')) return;
+                window.location.href = href;
+            });
+
+            // Keyboard: open on Enter or Space
+            card.addEventListener('keydown', function(e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    window.location.href = href;
+                }
+            });
+        });
+    })();
+</script>
+
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>
