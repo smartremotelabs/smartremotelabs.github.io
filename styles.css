@@ -250,7 +250,9 @@ header + .container .app-download .app-sub {
 .cta .app-download .app-info,
 .seo-section .app-download .app-info,
 .footer .app-download .app-info,
-.container > .app-download .app-info {
+.container > .app-download .app-info,
+.blog-post .app-download .app-info,
+.blog-cta .app-download .app-info {
     text-align: center;
 }
 
