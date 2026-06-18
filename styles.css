@@ -189,6 +189,17 @@ ul li, ol li {
     border: 1px solid var(--border-color);
 }
 
+/* Highlight badge for USP */
+.highlight-badge {
+    background-color: #FFD700; /* Gold/Yellow highlight */
+    color: #000;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 700;
+    margin-left: 5px;
+    display: inline-block;
+}
+
 .app-info {
     display: flex;
     flex-direction: column;
@@ -210,6 +221,44 @@ ul li, ol li {
 .app-download .play-store-link {
     margin-left: 0; /* center layout — no auto margin */
 }
+
+.download-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.qr-code-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background: white;
+    padding: 8px;
+    border-radius: 8px;
+    color: #333;
+}
+
+.qr-code {
+    width: 84px;
+    height: 84px;
+}
+
+.qr-code-container span {
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* Breadcrumbs */
+.breadcrumbs {
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+    color: var(--text-light);
+}
+.breadcrumbs .separator { margin: 0 8px; }
+.breadcrumbs .current { color: var(--text-dark); font-weight: 600; }
 
 .trust-signals {
     display: flex;
@@ -336,6 +385,55 @@ header + .container .app-download .app-sub, header + .container .trust-signals {
     border: 0;
     border-radius: 8px;
     box-shadow: var(--shadow);
+}
+
+/* ============================================
+   STICKY DOWNLOAD BAR
+   ============================================ */
+
+.sticky-download-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+    padding: 12px 0;
+    z-index: 1001;
+    transform: translateY(100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: none; /* Mobile only */
+}
+
+.sticky-download-bar.visible {
+    transform: translateY(0);
+}
+
+.sticky-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.sticky-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+}
+
+.sticky-text {
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sticky-download-bar .btn.small {
+    padding: 8px 16px;
+    font-size: 0.85rem;
 }
 
 /* ============================================
@@ -584,9 +682,10 @@ header {
 .screenshot-item img {
     max-width: 100%;
     height: auto;
-    border-radius: 12px;
-    box-shadow: var(--shadow-lg);
-    border: 1px solid var(--border-color);
+    border-radius: 0; /* Let the mockup's transparency handle the shape */
+    border: none;
+    background: transparent;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
 }
 
 .screenshot-item p {
@@ -984,6 +1083,10 @@ footer {
         max-width: 300px;
         margin: 0.5rem auto;
     }
+
+    .sticky-download-bar {
+        display: block;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1180,9 +1283,10 @@ footer {
 .blog-figure img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: var(--shadow-lg);
-    border: 1px solid var(--border-color);
+    border-radius: 0;
+    border: none;
+    background: transparent;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
     width: 40%;
     margin: 0 auto;
     display: block;

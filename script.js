@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all functionality
     initMobileMenu();
     initSmoothScroll();
+    initStickyDownload();
 });
 
 
@@ -17,21 +18,17 @@ document.addEventListener('DOMContentLoaded', function() {
 // ============================================
 
 function initMobileMenu() {
-    // Add mobile menu toggle functionality if needed
-    const header = document.querySelector('header');
-    
-    if (!header) return;
-    
-    // Handle small screen behavior
-    if (window.innerWidth < 768) {
-        // Optional: Add hamburger menu functionality here
-    }
-    
-    // Handle window resize
-    window.addEventListener('resize', function() {
-        if (window.innerWidth >= 768) {
-            // Show menu on larger screens
-        }
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (!navToggle || !navLinks) return;
+
+    navToggle.addEventListener('click', function() {
+        const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+        navToggle.setAttribute('aria-expanded', !expanded);
+        navToggle.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        document.body.classList.toggle('no-scroll'); // Prevent background scrolling
     });
 }
 
@@ -64,6 +61,30 @@ function initSmoothScroll() {
 }
 
 // ============================================
+// Sticky Download Bar Logic
+// ============================================
+
+function initStickyDownload() {
+    const stickyBar = document.getElementById('stickyDownload');
+    const heroSection = document.querySelector('.hero');
+    
+    if (!stickyBar || !heroSection) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Show bar when hero is scrolled past
+            if (!entry.isIntersecting) {
+                stickyBar.classList.add('visible');
+            } else {
+                stickyBar.classList.remove('visible');
+            }
+        });
+    }, { threshold: 0.1 }); // Trigger when 10% of hero is still visible
+
+    observer.observe(heroSection);
+}
+
+// ============================================
 // Analytics Events
 // ============================================
 
@@ -73,7 +94,7 @@ function trackDownloadClick() {
         gtag('event', 'view_item', {
             items: [{
                 id: 'app_download',
-                name: 'Smart Roku Remote Download',
+                name: 'Roku TV Remote Control Download',
                 category: 'app',
                 quantity: 1
             }]
@@ -93,6 +114,16 @@ function trackFAQView() {
         });
     }
 }
+
+// Add event listeners to FAQ questions for tracking
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item h3');
+    faqItems.forEach(item => {
+        item.addEventListener('click', function() {
+            trackFAQView();
+        });
+    });
+});
 
 // Add download tracking to all download buttons
 document.addEventListener('DOMContentLoaded', function() {
@@ -126,6 +157,6 @@ window.addEventListener('error', function(event) {
 // Print console info
 // ============================================
 
-console.log('%c Smart Roku Remote', 'font-size: 16px; font-weight: bold; color: #FF3B30;');
+console.log('%c Roku TV Remote Control', 'font-size: 16px; font-weight: bold; color: #FF3B30;');
 console.log('%c Your Android remote control app for Roku TV', 'font-size: 12px; color: #666;');
-console.log('Download: https://play.google.com/store/apps/details?id=com.smartrokuro');
+console.log('Download: https://play.google.com/store/apps/details?id=com.smartremotelabs.smartremoteforroku');
