@@ -555,7 +555,7 @@ header {
     .nav-links.active ~ .nav-play-link {
         display: inline-flex;
         position: absolute;
-        top: 290px;
+        top: 350px;
         left: 50%;
         transform: translateX(-50%);
         margin-top: 0;
@@ -1025,6 +1025,7 @@ footer {
     .nav-links.active {
         max-height: 500px;
         visibility: visible;
+        padding-bottom: 75px; /* Extra bottom padding to fit the play store badge */
     }
     
     .nav-links a {
@@ -1152,6 +1153,14 @@ footer {
     
     .nav-links a {
         padding: 12px 0;
+    }
+
+    .nav-links.active {
+        padding-bottom: 70px; /* Extra bottom padding to fit the play store badge */
+    }
+
+    .nav-links.active ~ .nav-play-link {
+        top: 295px;
     }
 }
 
