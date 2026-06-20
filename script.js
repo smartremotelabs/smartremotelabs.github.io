@@ -18,18 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // ============================================
 
 function initMobileMenu() {
-    const navToggle = document.getElementById('navToggle');
-    const navLinks = document.getElementById('navLinks');
-
-    if (!navToggle || !navLinks) return;
-
-    navToggle.addEventListener('click', function() {
-        const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
-        navToggle.setAttribute('aria-expanded', !expanded);
-        navToggle.classList.toggle('active');
-        navLinks.classList.toggle('active');
-        document.body.classList.toggle('no-scroll'); // Prevent background scrolling
-    });
+    // Handled by the inline script in each HTML file to avoid double-binding conflicts.
 }
 
 // ============================================

@@ -554,7 +554,12 @@ header {
     /* When the mobile nav is active, show the badge so users can access it in the menu */
     .nav-links.active ~ .nav-play-link {
         display: inline-flex;
-        margin-top: 12px; /* space within menu */
+        position: absolute;
+        top: 290px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 0;
+        z-index: 1000;
     }
 
     .nav-play-badge { height: 36px; }
