@@ -1,4 +1,4 @@
-﻿﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://smartremotelabs.github.io/</loc>
@@ -11,6 +11,22 @@
   <url>
     <loc>https://smartremotelabs.github.io/blog/</loc>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://smartremotelabs.github.io/blog/best-free-roku-remote-apps.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://smartremotelabs.github.io/blog/control-roku-volume-without-remote.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://smartremotelabs.github.io/blog/connect-roku-hotel-wifi.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://smartremotelabs.github.io/blog/connect-roku-wifi-without-remote.html</loc>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://smartremotelabs.github.io/blog/how-to-program-roku-remote-app.html</loc>
