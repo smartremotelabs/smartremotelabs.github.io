@@ -555,7 +555,7 @@ header {
     .nav-links.active ~ .nav-play-link {
         display: inline-flex;
         position: absolute;
-        top: 350px;
+        top: 370px; /* increased to add more buffer space below 'Contact' */
         left: 50%;
         transform: translateX(-50%);
         margin-top: 0;
@@ -1025,7 +1025,7 @@ footer {
     .nav-links.active {
         max-height: 500px;
         visibility: visible;
-        padding-bottom: 75px; /* Extra bottom padding to fit the play store badge */
+        padding-bottom: 95px; /* Extra bottom padding to fit the play store badge */
     }
     
     .nav-links a {
@@ -1156,11 +1156,11 @@ footer {
     }
 
     .nav-links.active {
-        padding-bottom: 70px; /* Extra bottom padding to fit the play store badge */
+        padding-bottom: 90px; /* Extra bottom padding to fit the play store badge */
     }
 
     .nav-links.active ~ .nav-play-link {
-        top: 295px;
+        top: 315px; /* increased to add more buffer space below 'Contact' */
     }
 }
 
