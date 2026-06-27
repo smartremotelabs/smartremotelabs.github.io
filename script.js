@@ -2,24 +2,209 @@
 // Roku TV Remote Control - Main JavaScript
 // ============================================
 
-// Wait for DOM to be ready
-document.addEventListener('DOMContentLoaded', function() {
-    console.log("Roku TV Remote Control website loaded successfully");
-    
-    // Initialize all functionality
-    initMobileMenu();
-    initSmoothScroll();
+document.addEventListener('DOMContentLoaded', function () {
+    initScrollAnimations();
+    initNavScrollEffect();
     initStickyDownload();
+    initFeatureTabs();
+    initScreenshotSlider();
+    initFAQAccordion();
+    initSmoothScroll();
+    trackDownloadLinks();
 });
 
 
 // ============================================
-// Mobile Menu Toggle
+// Scroll-triggered Reveal Animations
 // ============================================
 
-function initMobileMenu() {
-    // Handled by the inline script in each HTML file to avoid double-binding conflicts.
+function initScrollAnimations() {
+    const revealEls = document.querySelectorAll('.reveal');
+    if (!revealEls.length) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // animate once
+            }
+        });
+    }, {
+        threshold: 0.12,
+        rootMargin: '0px 0px -40px 0px'
+    });
+
+    revealEls.forEach(el => observer.observe(el));
 }
+
+
+// ============================================
+// Nav — backdrop blur + border on scroll
+// ============================================
+
+function initNavScrollEffect() {
+    const header = document.getElementById('site-header');
+    if (!header) return;
+
+    const handler = () => {
+        if (window.scrollY > 40) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    };
+
+    window.addEventListener('scroll', handler, { passive: true });
+    handler(); // run once on load
+}
+
+
+// ============================================
+// Sticky Download Bar Logic (Mobile)
+// ============================================
+
+function initStickyDownload() {
+    const stickyBar = document.getElementById('stickyDownload');
+    const heroSection = document.querySelector('.hero');
+
+    if (!stickyBar || !heroSection) return;
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (!entry.isIntersecting) {
+                stickyBar.classList.add('visible');
+            } else {
+                stickyBar.classList.remove('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    observer.observe(heroSection);
+}
+
+
+// ============================================
+// Feature Tab Filter
+// ============================================
+
+function initFeatureTabs() {
+    const tabs = document.querySelectorAll('.feature-tab');
+    const cards = document.querySelectorAll('.feature-card[data-category]');
+    if (!tabs.length) return;
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            // Update active tab
+            tabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            const filter = tab.dataset.filter;
+
+            cards.forEach(card => {
+                if (filter === 'all' || card.dataset.category === filter) {
+                    card.classList.remove('hidden');
+                    // Re-trigger reveal if needed
+                    if (!card.classList.contains('visible')) {
+                        card.classList.add('visible');
+                    }
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+        });
+    });
+}
+
+
+// ============================================
+// Screenshot Slider
+// ============================================
+
+function initScreenshotSlider() {
+    const slider = document.getElementById('screenshotSlider');
+    const prevBtn = document.getElementById('sliderPrev');
+    const nextBtn = document.getElementById('sliderNext');
+
+    if (!slider || !prevBtn || !nextBtn) return;
+
+    const SCROLL_AMOUNT = 240; // px per click
+
+    nextBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: SCROLL_AMOUNT, behavior: 'smooth' });
+    });
+
+    prevBtn.addEventListener('click', () => {
+        slider.scrollBy({ left: -SCROLL_AMOUNT, behavior: 'smooth' });
+    });
+
+    // Touch/drag swipe support
+    let isDragging = false;
+    let startX = 0;
+    let scrollStart = 0;
+
+    slider.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollStart = slider.scrollLeft;
+        slider.style.cursor = 'grabbing';
+    });
+    slider.addEventListener('mouseleave', () => {
+        isDragging = false;
+        slider.style.cursor = '';
+    });
+    slider.addEventListener('mouseup', () => {
+        isDragging = false;
+        slider.style.cursor = '';
+    });
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        slider.scrollLeft = scrollStart - (x - startX);
+    });
+
+    // Highlight the slide currently nearest the center of the viewport.
+    const slides = slider.querySelectorAll('.screenshot-slide');
+    if (slides.length) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                entry.target.classList.toggle('active', entry.intersectionRatio > 0.65);
+            });
+        }, {
+            root: slider,
+            threshold: [0.25, 0.5, 0.75],
+            rootMargin: '0px'
+        });
+
+        slides.forEach(slide => observer.observe(slide));
+    }
+}
+
+
+// ============================================
+// FAQ Accordion
+// ============================================
+
+function initFAQAccordion() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    if (!faqItems.length) return;
+
+    faqItems.forEach(item => {
+        const question = item.querySelector('h3');
+        if (!question) return;
+
+        question.addEventListener('click', () => {
+            const isOpen = item.classList.contains('open');
+            // Close all
+            faqItems.forEach(i => i.classList.remove('open'));
+            // Open clicked if it was closed
+            if (!isOpen) {
+                item.classList.add('open');
+            }
+        });
+    });
+}
+
 
 // ============================================
 // Smooth Scroll for Anchor Links
@@ -27,57 +212,27 @@ function initMobileMenu() {
 
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
+        anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            
-            // Skip if it's just "#"
             if (href === '#') return;
-            
+
             e.preventDefault();
-            
             const target = document.querySelector(href);
             if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-                
-                // Update URL without page reload
+                const headerH = document.getElementById('site-header')?.offsetHeight || 70;
+                const top = target.getBoundingClientRect().top + window.scrollY - headerH - 20;
+                window.scrollTo({ top, behavior: 'smooth' });
                 window.history.pushState(null, null, href);
             }
         });
     });
 }
 
-// ============================================
-// Sticky Download Bar Logic
-// ============================================
-
-function initStickyDownload() {
-    const stickyBar = document.getElementById('stickyDownload');
-    const heroSection = document.querySelector('.hero');
-    
-    if (!stickyBar || !heroSection) return;
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            // Show bar when hero is scrolled past
-            if (!entry.isIntersecting) {
-                stickyBar.classList.add('visible');
-            } else {
-                stickyBar.classList.remove('visible');
-            }
-        });
-    }, { threshold: 0.1 }); // Trigger when 10% of hero is still visible
-
-    observer.observe(heroSection);
-}
 
 // ============================================
-// Analytics Events
+// Analytics — Download Click Tracking
 // ============================================
 
-// Track download button clicks
 function trackDownloadClick() {
     if (typeof gtag !== 'undefined') {
         gtag('event', 'view_item', {
@@ -91,61 +246,47 @@ function trackDownloadClick() {
     }
 }
 
-// Track FAQ interactions
-function trackFAQView() {
-    if (typeof gtag !== 'undefined') {
-        gtag('event', 'view_item', {
-            items: [{
-                id: 'faq_view',
-                name: 'FAQ Viewed',
-                category: 'engagement'
-            }]
+function trackDownloadLinks() {
+    document.querySelectorAll('a[href*="play.google.com"]').forEach(link => {
+        link.addEventListener('click', trackDownloadClick);
+    });
+
+    // FAQ tracking
+    document.querySelectorAll('.faq-item h3').forEach(item => {
+        item.addEventListener('click', () => {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'view_item', {
+                    items: [{ id: 'faq_view', name: 'FAQ Viewed', category: 'engagement' }]
+                });
+            }
         });
-    }
+    });
 }
 
-// Add event listeners to FAQ questions for tracking
-document.addEventListener('DOMContentLoaded', function() {
-    const faqItems = document.querySelectorAll('.faq-item h3');
-    faqItems.forEach(item => {
-        item.addEventListener('click', function() {
-            trackFAQView();
-        });
-    });
-});
-
-// Add download tracking to all download buttons
-document.addEventListener('DOMContentLoaded', function() {
-    const downloadButtons = document.querySelectorAll('a[href*="play.google.com"]');
-    downloadButtons.forEach(button => {
-        button.addEventListener('click', trackDownloadClick);
-    });
-});
 
 // ============================================
-// Performance Optimization
+// Performance — Lazy load data-src images
 // ============================================
 
-// Lazy load images (if using native lazy loading)
 if ('loading' in HTMLImageElement.prototype) {
     document.querySelectorAll('img[data-src]').forEach(img => {
         img.src = img.dataset.src;
     });
 }
 
+
 // ============================================
 // Error Handling
 // ============================================
 
-window.addEventListener('error', function(event) {
+window.addEventListener('error', function (event) {
     console.error('An error occurred:', event.error);
-    // You can send errors to a monitoring service here
 });
 
+
 // ============================================
-// Print console info
+// Console branding
 // ============================================
 
-console.log('%c Roku TV Remote Control', 'font-size: 16px; font-weight: bold; color: #FF3B30;');
-console.log('%c Your Android remote control app for Roku TV', 'font-size: 12px; color: #666;');
-console.log('Download: https://play.google.com/store/apps/details?id=com.smartremotelabs.smartremoteforroku');
+console.log('%c📺 Roku TV Remote Control', 'font-size:16px; font-weight:800; color:#8B5CF6;');
+console.log('%c  Free Roku remote for Android — smartremotelabs.github.io', 'font-size:12px; color:#888;');
