@@ -1317,6 +1317,12 @@ footer {
 @media (max-width: 800px) {
     .nav .nav-cta { display: none; }
     .nav-toggle { display: flex; }
+    .nav-links .nav-cta {
+        display: inline-flex;
+        width: 100%;
+        justify-content: center;
+        padding: 14px 0;
+    }
     .nav-links {
         position: absolute;
         top: 100%;
@@ -1324,6 +1330,7 @@ footer {
         background: rgba(8, 8, 16, 0.98);
         backdrop-filter: blur(16px);
         flex-direction: column;
+        align-items: center;
         gap: 0;
         padding: 0 24px;
         max-height: 0;
