@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Free Roku remote app for iPhone. Aruk finds your Roku TV on Wi-Fi and adds voice search, a keyboard, custom shortcuts, and a Home Screen widget.">
+    <meta name="keywords"
+        content="roku remote iphone, roku tv remote app ios, iphone roku remote, free roku remote for iphone, roku remote widget, control roku from iphone, roku keyboard iphone, roku voice search iphone, tcl roku remote iphone, hisense roku remote app">
+    <meta name="author" content="Aruk: TV Remote">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <meta name="theme-color" content="#2563EB">
+    <meta name="apple-itunes-app" content="app-id=6827170734">
+    <meta name="apple-mobile-web-app-title" content="Aruk: TV Remote">
+    <meta name="application-name" content="Aruk: TV Remote">
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Aruk: TV Remote">
+    <meta property="og:title" content="Aruk: TV Remote for iPhone — Free Roku Remote App for iOS">
+    <meta property="og:description"
+        content="Turn your iPhone into a Roku remote. Find your Roku on Wi-Fi, search by voice, type with the iPhone keyboard, and control playback from a Home Screen widget.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://smartremotelabs.github.io/roku-remote-iphone.html">
+    <meta property="og:image" content="https://smartremotelabs.github.io/images/Feature graphic.webp">
+    <meta property="og:image:alt" content="Aruk remote for Roku TV, with voice search and a full on-screen remote">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Aruk: TV Remote for iPhone — Free Roku Remote App for iOS">
+    <meta name="twitter:description"
+        content="Turn your iPhone into a Roku remote. Voice search, keyboard, custom shortcuts, and a Home Screen widget.">
+    <meta name="twitter:image" content="https://smartremotelabs.github.io/images/Feature graphic.webp">
+    <meta name="twitter:image:alt" content="Aruk remote for Roku TV, with voice search and a full on-screen remote">
+
+    <link rel="canonical" href="https://smartremotelabs.github.io/roku-remote-iphone.html">
+    <link rel="icon" type="image/png" href="Icon - round.webp">
+    <link rel="apple-touch-icon" href="Icon - round.webp">
+
+    <title>Aruk: TV Remote for iPhone — Free Roku Remote App for iOS</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://smartremotelabs.github.io/"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "iOS",
+                    "item": "https://smartremotelabs.github.io/roku-remote-iphone.html"
+                }
+            ]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "MobileApplication",
+            "name": "Aruk: TV Remote for iPhone",
+            "operatingSystem": "iOS",
+            "applicationCategory": "UtilitiesApplication",
+            "description": "Free Roku remote app for iPhone. Discovers Roku TVs and streaming players on Wi-Fi, with voice search, an iPhone keyboard, custom shortcuts, favorite apps, and a Home Screen widget.",
+            "url": "https://smartremotelabs.github.io/roku-remote-iphone.html",
+            "downloadUrl": "https://apps.apple.com/app/id6827170734",
+            "installUrl": "https://apps.apple.com/app/id6827170734",
+            "image": "https://smartremotelabs.github.io/images/ios-Remote-screen.png",
+            "screenshot": [
+                "https://smartremotelabs.github.io/images/ios-device-discovery-screen.png",
+                "https://smartremotelabs.github.io/images/ios-Remote-screen.png",
+                "https://smartremotelabs.github.io/images/ios-Home-tab.png",
+                "https://smartremotelabs.github.io/images/ios-Keyboard.png",
+                "https://smartremotelabs.github.io/images/ios-Macros.png",
+                "https://smartremotelabs.github.io/images/ios-Widget.png"
+            ],
+            "featureList": [
+                "Wi-Fi discovery of Roku TVs and streaming players",
+                "Full remote with directional pad, playback, and volume",
+                "Voice search",
+                "iPhone keyboard for Roku text entry",
+                "Custom shortcuts",
+                "Favorite app launchers",
+                "Home Screen widget",
+                "Sleep timer on Roku TVs"
+            ],
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "dateModified": "2026-11-10",
+            "isPartOf": {
+                "@type": "WebSite",
+                "name": "Aruk: TV Remote",
+                "url": "https://smartremotelabs.github.io/"
+            }
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": "How to connect an iPhone to a Roku TV with Aruk",
+            "description": "Install Aruk on iPhone, allow Local Network access, and select the Roku device found on your Wi-Fi.",
+            "totalTime": "PT2M",
+            "tool": [
+                { "@type": "HowToTool", "name": "iPhone" },
+                { "@type": "HowToTool", "name": "Roku TV or Roku streaming player" }
+            ],
+            "step": [
+                {
+                    "@type": "HowToStep",
+                    "position": 1,
+                    "name": "Install Aruk",
+                    "text": "Download Aruk: TV Remote from the App Store and open it on your iPhone."
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 2,
+                    "name": "Use the same Wi-Fi",
+                    "text": "Connect your iPhone and your Roku TV or streaming player to the same Wi-Fi network."
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 3,
+                    "name": "Allow mobile control on Roku",
+                    "text": "On the Roku, open Settings, then System, then Advanced system settings, then Control by mobile apps, and set it to Permissive."
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 4,
+                    "name": "Allow Local Network access",
+                    "text": "When iOS asks, allow Local Network access so Aruk can see devices on your home network."
+                },
+                {
+                    "@type": "HowToStep",
+                    "position": 5,
+                    "name": "Select your Roku",
+                    "text": "Choose the Roku that Aruk finds. If it does not appear, tap Rescan or add the device manually."
+                }
+            ]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "Does Aruk work as a Roku remote on iPhone?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. Aruk: TV Remote for iPhone controls Roku TVs and Roku streaming players that are on the same Wi-Fi network. It includes a directional pad, playback and volume controls, voice search, an iPhone keyboard, favorite apps, custom shortcuts, and a Home Screen widget."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How do I connect my iPhone to a Roku TV?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Install Aruk, join the same Wi-Fi network as your Roku, and set Control by mobile apps to Permissive under Settings, System, Advanced system settings. Allow Local Network access when iOS asks, then select the Roku that Aruk finds. You can also tap Rescan or add a device manually."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Why does iPhone ask for Local Network access?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "iOS requires permission before an app can discover devices on your Wi-Fi. Allow Local Network access so Aruk can find your Roku. You can change this later in the iPhone Settings app under Privacy and Security, then Local Network."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I use this iPhone app if I lost my Roku remote?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes, after Control by mobile apps is set to Permissive. Aruk then covers navigation, playback, voice search, and typing. Volume controls work on supported Roku TVs. If mobile control is still set to Disabled or Limited, use the buttons on the TV or player once to change that setting."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Which Roku devices work with the iPhone app?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Aruk works with Roku TVs and Roku streaming players on the same Wi-Fi network, including Streaming Stick, Streaming Stick Plus, Express, Premiere, and Ultra, and Roku TVs from TCL, Hisense, onn., Sharp, Insignia, and Philips. Sleep Timer requires a Roku TV."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Does the iPhone app include a Home Screen widget?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. The Aruk widget puts Back, Home, the directional pad, playback, and volume on your iPhone Home Screen so you can control the Roku without opening the app."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Can I type and search on Roku from my iPhone?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Yes. The remote screen has a text field that sends what you type to the Roku, and Voice Search lets you speak a title instead of spelling it with the directional pad."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "Is Aruk affiliated with Roku?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "No. Aruk is an independent app and is not affiliated with, endorsed by, or sponsored by Roku, Inc. Roku is a trademark of Roku, Inc."
+                    }
+                }
+            ]
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="announcement-bar">
+        <span class="pill"><span class="dot"></span> Free for iPhone</span>
+        Roku remote app for iOS — TVs and streaming players
+    </div>
+
+    <header id="site-header">
+        <div class="container">
+            <nav class="nav">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="Icon - round.webp" alt="Aruk: TV Remote" class="logo-icon" loading="lazy">
+                    </a>
+                    <p class="logo-name"><a href="index.html">Aruk: TV Remote</a></p>
+                </div>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Android</a></li>
+                    <li><a href="roku-remote-iphone.html" class="active" aria-current="page">iOS</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="nav-badges">
+                    <a href="https://play.google.com/store/apps/details?id=com.smartremotelabs.smartremoteforroku"
+                        target="_blank" rel="noopener noreferrer" class="nav-badge" aria-label="Get it on Google Play">
+                        <img src="images/GetItOnGooglePlay_Badge.png" alt="Get it on Google Play" width="478" height="142">
+                    </a>
+                    <a href="https://apps.apple.com/app/id6827170734"
+                        target="_blank" rel="noopener noreferrer" class="nav-badge" aria-label="Download on the App Store">
+                        <img src="images/App store badge.png" alt="Download on the App Store" width="239" height="80">
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="container">
+                <div class="hero-content">
+                    <nav class="breadcrumbs hero-breadcrumb" aria-label="Breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span class="separator">›</span>
+                        <span class="current">iOS</span>
+                    </nav>
+                    <div class="platform-switch reveal">
+                        <a href="index.html">Android</a>
+                        <a href="roku-remote-iphone.html" class="active" aria-current="page">iOS</a>
+                    </div>
+                    <span class="eyebrow reveal">Free Roku Remote for iPhone</span>
+                    <h1 class="hero-headline reveal reveal-delay-1">
+                        Control Your Roku TV<br>
+                        <span class="accent">from Your iPhone</span>
+                    </h1>
+                    <p class="hero-sub reveal reveal-delay-2">
+                        Aruk turns an iPhone into a Roku remote. It finds Roku TVs and streaming players on your
+                        Wi-Fi, then gives you voice search, a real keyboard, custom shortcuts, and a Home Screen
+                        widget — useful when the clicker is lost, the batteries are dead, or you just want to type
+                        a title faster.
+                    </p>
+
+                    <div class="hero-stats reveal reveal-delay-2">
+                        <div class="hero-stat accent-stat">
+                            <span class="stat-value">Free</span>
+                            <span class="stat-label">on iPhone</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-value">Wi-Fi</span>
+                            <span class="stat-label">Auto-discovery</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-value">Voice</span>
+                            <span class="stat-label">Search</span>
+                        </div>
+                        <div class="hero-stat">
+                            <span class="stat-value">Widget</span>
+                            <span class="stat-label">Home Screen</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-ctas reveal reveal-delay-3">
+                        <a href="https://apps.apple.com/app/id6827170734"
+                            target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-primary"
+                            onclick="trackDownloadClick()">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                            </svg>
+                            Download on the App Store
+                        </a>
+                        <a href="#features" class="btn-pill btn-pill-outline">
+                            See iPhone Features
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M12 5v14M5 12l7 7 7-7" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="hero-tags reveal reveal-delay-4">
+                        <span class="hero-tag">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z" />
+                                <path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8" />
+                            </svg>
+                            Voice search
+                        </span>
+                        <span class="hero-tag">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <path d="M5 12.55a11 11 0 0114.08 0" />
+                                <path d="M1.42 9a16 16 0 0121.16 0" />
+                                <path d="M8.53 16.11a6 6 0 016.95 0" />
+                                <circle cx="12" cy="20" r="1" />
+                            </svg>
+                            Wi-Fi auto-discovery
+                        </span>
+                        <span class="hero-tag">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <rect x="3" y="3" width="7" height="7" rx="1" />
+                                <rect x="14" y="3" width="7" height="7" rx="1" />
+                                <rect x="3" y="14" width="7" height="7" rx="1" />
+                                <rect x="14" y="14" width="7" height="7" rx="1" />
+                            </svg>
+                            Home Screen widget
+                        </span>
+                        <span class="hero-tag">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                            </svg>
+                            Custom shortcuts
+                        </span>
+                    </div>
+
+                    <div class="hero-brands reveal reveal-delay-5" style="margin-top: 2rem; text-align: center;">
+                        <p style="font-size: 0.85rem; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem;">
+                            Works with Roku TVs from</p>
+                        <img src="images/tv brands.png" alt="Roku TV brands that work with the iPhone remote: TCL, Hisense, onn., Sharp"
+                            style="max-height: 55px; opacity: 0.9;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Built for iPhone</span>
+                    <h2>A Roku Remote That <span class="accent">Lives on Your iPhone</span></h2>
+                    <p>The same controls as the clicker, plus the things a phone does better: talking, typing, and one-tap shortcuts.</p>
+                </div>
+
+                <div class="feature-tabs reveal">
+                    <button class="feature-tab active" data-filter="all">All Features</button>
+                    <button class="feature-tab" data-filter="control">Remote Control</button>
+                    <button class="feature-tab" data-filter="smart">iPhone Features</button>
+                    <button class="feature-tab" data-filter="privacy">Privacy</button>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card reveal reveal-delay-1" data-category="control">
+                        <div class="feature-icon-wrap">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 8 12 12 14 14" />
+                            </svg>
+                        </div>
+                        <h3>Full Roku Remote</h3>
+                        <p>Back, Home, Options, a directional pad, replay, rewind, play/pause, and fast forward. Volume and mute are there for supported Roku TVs. Gestures can be switched on when you would rather swipe.</p>
+                    </div>
+
+                    <div class="feature-card reveal reveal-delay-2" data-category="control">
+                        <div class="feature-icon-wrap">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M5 12.55a11 11 0 0114.08 0" />
+                                <path d="M1.42 9a16 16 0 0121.16 0" />
+                                <path d="M8.53 16.11a6 6 0 016.95 0" />
+                                <circle cx="12" cy="20" r="1" />
+                            </svg>
+                        </div>
+                        <h3>Finds Your Roku on Wi-Fi</h3>
+                        <p>Aruk searches the local network and lists the Roku devices it finds, with a connected state you can see. Tap Rescan, or add a device manually if you already know the address.</p>
+                    </div>
+
+                    <div class="feature-card reveal reveal-delay-3" data-category="smart">
+                        <div class="feature-icon-wrap">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z" />
+                                <path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8" />
+                            </svg>
+                        </div>
+                        <h3>Voice Search</h3>
+                        <p>Say a show, movie, or app instead of picking out letters on the TV. Voice Search sits at the top of the remote, next to the gesture switch.</p>
+                    </div>
+
+                    <div class="feature-card reveal reveal-delay-1" data-category="smart">
+                        <div class="feature-icon-wrap">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="2" y="6" width="20" height="12" rx="2" />
+                                <path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M8 14h8" />
+                            </svg>
+                        </div>
+                        <h3>Type with the iPhone Keyboard</h3>
+                        <p>The remote has a text field that sends what you type to the Roku. Searching for “country music” takes a few seconds on the phone keyboard instead of a minute with the directional pad.</p>
+                    </div>
+
+                    <div class="feature-card reveal reveal-delay-2" data-category="smart">
+                        <div class="feature-icon-wrap">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                            </svg>
+                        </div>
+                        <h3>Custom Shortcuts</h3>
+                        <p>Build a quick action from keys, waits, typed text, and app launches. One example opens YouTube, waits, and types a search — then you run that whole sequence from Home.</p>
+                    </div>
+
+                    <div class="feature-card reveal reveal-delay-3" data-category="smart">
+                        <div class="feature-icon-wrap">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="3" width="7" height="7" rx="1" />
+                                <rect x="14" y="3" width="7" height="7" rx="1" />
+                                <rect x="3" y="14" width="7" height="7" rx="1" />
+                                <rect x="14" y="14" width="7" height="7" rx="1" />
+                            </svg>
+                        </div>
+                        <h3>Home Screen Widget</h3>
+                        <p>Add the Aruk widget and keep Back, Home, OK, playback, and volume on the iPhone Home Screen. You can change the channel of the evening without unlocking into the full app.</p>
+                    </div>
+
+                    <div class="feature-card reveal reveal-delay-1" data-category="control">
+                        <div class="feature-icon-wrap">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="3" width="7" height="7" />
+                                <rect x="14" y="3" width="7" height="7" />
+                                <rect x="14" y="14" width="7" height="7" />
+                                <rect x="3" y="14" width="7" height="7" />
+                            </svg>
+                        </div>
+                        <h3>Favorite Apps and What’s Playing</h3>
+                        <p>Home shows the connected Roku, what is active, and favorite apps such as Netflix, YouTube, and ESPN. Launch one with a tap instead of hunting through the channel grid.</p>
+                    </div>
+
+                    <div class="feature-card reveal reveal-delay-2" data-category="control">
+                        <div class="feature-icon-wrap">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9" />
+                                <polyline points="12 7 12 12 16 14" />
+                            </svg>
+                        </div>
+                        <h3>Sleep Timer on Roku TVs</h3>
+                        <p>Set the TV to turn off later from the Home tab. Sleep Timer is for Roku TVs. Streaming sticks and players do not show it.</p>
+                    </div>
+
+                    <div class="feature-card reveal reveal-delay-3" data-category="privacy">
+                        <div class="feature-icon-wrap">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                        </div>
+                        <h3>Stays on Your Wi-Fi</h3>
+                        <p>The iPhone talks to the Roku over your local network. Nothing about that control session needs to leave the house. Allow Local Network access when iOS asks, or discovery cannot see the TV.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="screenshots" id="screenshots">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">iPhone Screenshots</span>
+                    <h2>See the <span class="accent">iOS App</span></h2>
+                    <p>Discovery, the remote, Home, the keyboard, shortcuts, and the widget.</p>
+                </div>
+
+                <div class="screenshot-slider-wrap reveal reveal-delay-1">
+                    <div class="screenshot-slider" id="screenshotSlider">
+                        <div class="screenshot-slide ios-shot">
+                            <img src="images/ios-device-discovery-screen.png"
+                                alt="Aruk on iPhone discovering a Roku Streaming Stick on the local Wi-Fi network, with Rescan and Add Device Manually"
+                                width="1206" height="2622" loading="lazy">
+                            <p class="screenshot-label">Find your Roku</p>
+                        </div>
+                        <div class="screenshot-slide ios-shot">
+                            <img src="images/ios-Remote-screen.png"
+                                alt="iPhone Roku remote with voice search, directional pad, playback keys, volume, and a text field"
+                                width="1206" height="2622" loading="lazy">
+                            <p class="screenshot-label">Full remote</p>
+                        </div>
+                        <div class="screenshot-slide ios-shot">
+                            <img src="images/ios-Home-tab.png"
+                                alt="Aruk iPhone Home tab showing a connected Roku Streaming Stick Plus, favorite apps, and quick actions"
+                                width="1206" height="2622" loading="lazy">
+                            <p class="screenshot-label">Home and favorites</p>
+                        </div>
+                        <div class="screenshot-slide ios-shot">
+                            <img src="images/ios-Keyboard.png"
+                                alt="Typing country music into a Roku search from the iPhone keyboard in Aruk"
+                                width="1206" height="2622" loading="lazy">
+                            <p class="screenshot-label">iPhone keyboard</p>
+                        </div>
+                        <div class="screenshot-slide ios-shot">
+                            <img src="images/ios-Macros.png"
+                                alt="Editing a custom Roku shortcut that launches YouTube, waits, and types a search"
+                                width="1206" height="2622" loading="lazy">
+                            <p class="screenshot-label">Custom shortcuts</p>
+                        </div>
+                        <div class="screenshot-slide ios-shot">
+                            <img src="images/ios-Widget.png"
+                                alt="Aruk Roku remote widget on the iPhone Home Screen with navigation, playback, and volume buttons"
+                                width="1206" height="2622" loading="lazy">
+                            <p class="screenshot-label">Home Screen widget</p>
+                        </div>
+                    </div>
+
+                    <div class="slider-nav">
+                        <button class="slider-btn" id="sliderPrev" aria-label="Previous screenshot">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <polyline points="15 18 9 12 15 6" />
+                            </svg>
+                        </button>
+                        <button class="slider-btn" id="sliderNext" aria-label="Next screenshot">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <polyline points="9 18 15 12 9 6" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seo-section" id="setup">
+            <div class="container">
+                <h2>Free Roku Remote App <span class="accent">for iPhone</span></h2>
+                <p>
+                    A lost Roku remote usually means a trip to the store or a night of using the buttons on the TV.
+                    Aruk is a free iPhone app that controls Roku TVs and Roku streaming players over the Wi-Fi you
+                    already have. Open it, pick the device it found, and use the remote, the keyboard, or the
+                    Home Screen widget. There is an <a href="index.html">Android version</a> as well if the household
+                    is mixed.
+                </p>
+
+                <h3>How to connect your iPhone to a Roku TV</h3>
+                <ol>
+                    <li>Download <a href="https://apps.apple.com/app/id6827170734" target="_blank" rel="noopener noreferrer">Aruk: TV Remote</a> from the App Store.</li>
+                    <li>Connect the iPhone and the Roku to the same Wi-Fi network. Guest networks and VPNs often hide local devices.</li>
+                    <li>On the Roku, set Control by mobile apps to Permissive: Settings › System › Advanced system settings › Control by mobile apps.</li>
+                    <li>Open Aruk and allow Local Network access when iOS asks.</li>
+                    <li>Select the Roku that appears. Use Rescan or Add Device Manually if the list stays empty.</li>
+                    <li>Use the remote, voice search, the keyboard, favorite apps, or a shortcut you created.</li>
+                </ol>
+
+                <h3>Roku TVs and players that work</h3>
+                <p>
+                    Aruk is for Roku devices on your network, not a universal remote for every TV brand. That includes
+                    Roku TVs and players such as Streaming Stick, Streaming Stick Plus, Express, Premiere, and Ultra,
+                    including sets sold by TCL, Hisense, onn., Sharp, Insignia, and Philips. The iPhone and the Roku
+                    have to share a network. Sleep Timer is limited to Roku TVs, which is labeled in the app.
+                </p>
+                <p>
+                    If the picture is fine but the Roku itself feels sluggish, a restart is worth trying before you
+                    assume the remote app is the problem. The guide
+                    <a href="is-your-roku-tv-running-slow.html">Is your Roku TV running slow?</a> walks through a
+                    simple restart that does not wipe your apps.
+                </p>
+
+                <h3>When the physical remote is missing</h3>
+                <ul>
+                    <li><strong>Lost Roku remote:</strong> use the iPhone once mobile control is set to Permissive.</li>
+                    <li><strong>Dead batteries:</strong> the app does not need the clicker’s batteries. Your phone does.</li>
+                    <li><strong>Worn buttons:</strong> the on-screen pad, playback keys, and volume buttons cover everyday control.</li>
+                    <li><strong>Slow typing:</strong> the iPhone keyboard and Voice Search replace the on-screen letter grid.</li>
+                </ul>
+
+                <h3>Home Screen widget and shortcuts</h3>
+                <p>
+                    The widget is the fastest path for people who only need a few keys. It shows a directional pad,
+                    Back, Home, playback, and volume under the name Aruk. For longer routines, a custom shortcut can
+                    launch an app, wait, move the highlight, and type text. Favorite apps on the Home tab — Netflix,
+                    YouTube, ESPN, and whatever else you pin — open with one tap.
+                </p>
+
+                <div class="app-download mt-2 app-download-buttons">
+                    <a href="https://apps.apple.com/app/id6827170734"
+                        target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-primary"
+                        onclick="trackDownloadClick()">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        Download on the App Store
+                    </a>
+                    <a href="index.html" class="btn-pill btn-pill-outline">Android version</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq" id="faq">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">iPhone Questions</span>
+                    <h2>Roku Remote for iPhone, <span class="accent">Answered</span></h2>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Does Aruk work as a Roku remote on iPhone?</h3>
+                    <div class="faq-answer">
+                        <p>Yes. Aruk: TV Remote for iPhone controls Roku TVs and Roku streaming players that are on the same Wi-Fi network. It includes a directional pad, playback and volume controls, voice search, an iPhone keyboard, favorite apps, custom shortcuts, and a Home Screen widget.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How do I connect my iPhone to a Roku TV?</h3>
+                    <div class="faq-answer">
+                        <p>Install Aruk, join the same Wi-Fi network as your Roku, and set Control by mobile apps to Permissive under Settings › System › Advanced system settings. Allow Local Network access when iOS asks, then select the Roku that Aruk finds. You can also tap Rescan or add a device manually.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Why does iPhone ask for Local Network access?</h3>
+                    <div class="faq-answer">
+                        <p>iOS requires permission before an app can discover devices on your Wi-Fi. Allow Local Network access so Aruk can find your Roku. You can change this later in the iPhone Settings app under Privacy &amp; Security › Local Network.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I use this iPhone app if I lost my Roku remote?</h3>
+                    <div class="faq-answer">
+                        <p>Yes, after Control by mobile apps is set to Permissive. Aruk then covers navigation, playback, voice search, and typing. Volume controls work on supported Roku TVs. If mobile control is still Disabled or Limited, use the buttons on the TV or player once to change that setting.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Which Roku devices work with the iPhone app?</h3>
+                    <div class="faq-answer">
+                        <p>Aruk works with Roku TVs and Roku streaming players on the same Wi-Fi network, including Streaming Stick, Streaming Stick Plus, Express, Premiere, and Ultra, and Roku TVs from TCL, Hisense, onn., Sharp, Insignia, and Philips. Sleep Timer requires a Roku TV.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Does the iPhone app include a Home Screen widget?</h3>
+                    <div class="faq-answer">
+                        <p>Yes. The Aruk widget puts Back, Home, the directional pad, playback, and volume on your iPhone Home Screen so you can control the Roku without opening the app.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I type and search on Roku from my iPhone?</h3>
+                    <div class="faq-answer">
+                        <p>Yes. The remote screen has a text field that sends what you type to the Roku, and Voice Search lets you speak a title instead of spelling it with the directional pad.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Is Aruk affiliated with Roku?</h3>
+                    <div class="faq-answer">
+                        <p>No. Aruk is an independent app and is not affiliated with, endorsed by, or sponsored by Roku, Inc. Roku is a trademark of Roku, Inc.</p>
+                    </div>
+                </div>
+
+                <p style="margin-top:40px; text-align:center; color: var(--text-secondary);">
+                    <strong style="color:var(--text-primary)">Still stuck connecting?</strong>
+                    <a href="contact.html">Contact us</a> or read the <a href="faq.html">full FAQ</a>.
+                </p>
+            </div>
+        </section>
+
+        <section class="cta" id="download">
+            <div class="container">
+                <div class="cta-card reveal">
+                    <div class="status-pill">
+                        <span class="dot"></span>
+                        For iPhone
+                    </div>
+                    <h2>Put a Roku Remote <span class="accent">on Your iPhone</span></h2>
+                    <p>Download Aruk: TV Remote from the App Store, then connect to the Roku on your Wi-Fi.</p>
+
+                    <div class="cta-mini-features">
+                        <span class="cta-badge">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M5 12.55a11 11 0 0114.08 0" />
+                                <path d="M1.42 9a16 16 0 0121.16 0" />
+                                <path d="M8.53 16.11a6 6 0 016.95 0" />
+                                <circle cx="12" cy="20" r="1" />
+                            </svg>
+                            Same Wi-Fi network
+                        </span>
+                        <span class="cta-badge">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z" />
+                                <path d="M19 10v2a7 7 0 01-14 0v-2" />
+                            </svg>
+                            Voice search
+                        </span>
+                        <span class="cta-badge">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <rect x="3" y="3" width="7" height="7" rx="1" />
+                                <rect x="14" y="3" width="7" height="7" rx="1" />
+                                <rect x="3" y="14" width="7" height="7" rx="1" />
+                                <rect x="14" y="14" width="7" height="7" rx="1" />
+                            </svg>
+                            Home Screen widget
+                        </span>
+                    </div>
+
+                    <div class="hero-ctas" style="justify-content:center;">
+                        <a href="https://apps.apple.com/app/id6827170734"
+                            target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-primary"
+                            onclick="trackDownloadClick()">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                            </svg>
+                            Download on the App Store
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="stickyDownload" class="sticky-download-bar">
+        <div class="container sticky-content">
+            <img src="Icon - round.webp" alt="" class="sticky-icon" loading="lazy">
+            <span class="sticky-text">Aruk for iPhone</span>
+            <a href="https://apps.apple.com/app/id6827170734"
+                target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-primary"
+                style="padding:8px 18px; font-size:0.85rem;" onclick="trackDownloadClick()">App Store</a>
+        </div>
+    </div>
+
+    <div class="prefooter-cta">
+        <div class="container">
+            <div class="prefooter-inner">
+                <div class="prefooter-text">
+                    <h3>Control your Roku from the phone you already have</h3>
+                    <p>iPhone remote, keyboard, voice search, and a Home Screen widget. Android is available too.</p>
+                </div>
+                <div class="prefooter-actions">
+                    <a href="https://apps.apple.com/app/id6827170734"
+                        target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-primary"
+                        onclick="trackDownloadClick()">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="width:16px;height:16px;">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                        </svg>
+                        App Store
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.smartremotelabs.smartremoteforroku"
+                        target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-outline"
+                        style="padding:12px 20px; font-size:0.88rem;">Google Play</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="footer-brand">
+                    <img src="Icon - round.webp" alt="Aruk: TV Remote" loading="lazy">
+                    <span>Aruk: TV Remote</span>
+                </div>
+                <h3>About</h3>
+                <p>A free Roku remote for iPhone. Find the Roku on your Wi-Fi, then use the remote, voice search, keyboard, shortcuts, or the Home Screen widget.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#screenshots">Screenshots</a></li>
+                    <li><a href="index.html">Android</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Get the App</h3>
+                <ul>
+                    <li>
+                        <a href="https://apps.apple.com/app/id6827170734"
+                            target="_blank" rel="noopener noreferrer">App Store</a>
+                    </li>
+                    <li>
+                        <a href="https://play.google.com/store/apps/details?id=com.smartremotelabs.smartremoteforroku"
+                            target="_blank" rel="noopener noreferrer">Google Play</a>
+                    </li>
+                    <li><a href="https://www.tiktok.com/@tvtvremotecontrol" target="_blank" rel="noopener noreferrer">TikTok</a></li>
+                    <li><a href="https://www.youtube.com/@tvtvremotecontrol" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+                    <li><a href="https://www.facebook.com/profile.php?id=61594049425083" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="font-size: 0.8em; text-align: center; margin-top: 20px; padding: 10px; color: #666;">
+            <em>Aruk is an independent application and is not affiliated with, endorsed by, or sponsored by Roku, Inc.
+                Roku&reg; is a registered trademark of Roku, Inc.</em>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('navToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        navToggle.addEventListener('click', function () {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        navLinks.addEventListener('click', function (e) {
+            if (e.target.tagName === 'A') {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    </script>
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

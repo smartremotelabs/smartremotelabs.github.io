@@ -227,14 +227,18 @@ header.scrolled {
     width: auto;
     border-radius: 8px;
 }
-.logo h1 {
+.logo h1,
+.logo .logo-name {
     font-size: 1.25rem;
     margin: 0;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
+    line-height: 1.15;
 }
-.logo h1 a { color: var(--text-primary); }
-.logo h1 a:hover { color: var(--white); text-decoration: none; }
+.logo h1 a,
+.logo .logo-name a { color: var(--text-primary); }
+.logo h1 a:hover,
+.logo .logo-name a:hover { color: var(--white); text-decoration: none; }
 
 .nav-links {
     display: flex;
@@ -280,6 +284,30 @@ header.scrolled {
     box-shadow: 0 4px 20px var(--primary-glow);
     color: var(--white) !important;
     text-decoration: none;
+}
+
+.nav-badges {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+.nav-badge {
+    display: inline-flex;
+    line-height: 0;
+    padding: 0;
+    border-radius: 7px;
+}
+.nav-badge img {
+    height: 36px;
+    width: auto;
+    display: block;
+    border-radius: 7px;
+    transition: transform var(--transition), filter var(--transition);
+}
+.nav-badge:hover img {
+    transform: translateY(-1px);
+    filter: brightness(1.08);
 }
 
 /* Hamburger toggle */
@@ -1279,9 +1307,21 @@ footer {
     .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
 }
 
+@media (max-width: 1180px) {
+    .nav-badge img { height: 32px; }
+    .nav-badges { gap: 6px; }
+}
+
 @media (max-width: 800px) {
+    .nav { flex-wrap: wrap; }
     .nav .nav-cta { display: none; }
-    .nav-toggle { display: flex; }
+    .nav-toggle { display: flex; margin-left: auto; }
+    .nav-badges {
+        flex: 1 0 100%;
+        gap: 8px;
+        padding: 2px 0 8px;
+    }
+    .nav-badge img { height: 36px; }
     .nav-links .nav-cta {
         display: inline-flex;
         width: 100%;
@@ -1306,7 +1346,7 @@ footer {
         border-bottom: 1px solid var(--border);
     }
     .nav-links.active {
-        max-height: 400px;
+        max-height: 520px;
         visibility: visible;
         padding: 12px 24px 20px;
     }
@@ -1383,3 +1423,53 @@ footer {
 /* FAQ page category */
 .faq-category { margin-bottom: 4rem; }
 .faq-category h2 { text-align: left; border-bottom: 2px solid var(--primary); padding-bottom: 1rem; margin-bottom: 2rem; }
+
+/* ============================================
+   PLATFORM SWITCH + iOS SCREENSHOTS
+   ============================================ */
+.platform-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    margin-bottom: 1.25rem;
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+}
+.platform-switch a {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 14px;
+    border-radius: var(--radius-pill);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-secondary);
+}
+.platform-switch a:hover { color: var(--white); }
+.platform-switch a.active {
+    background: var(--primary);
+    color: var(--white);
+}
+
+/* Marketing shots already include the iPhone frame and caption. */
+.screenshot-slide.ios-shot { width: 250px; }
+.ios-shot img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 22px;
+    background: #eef1f6;
+    box-shadow: var(--shadow-md);
+}
+.ios-shot img:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-glow), var(--shadow-lg);
+    transition: transform var(--transition), box-shadow var(--transition);
+}
+@media (max-width: 768px) {
+    .screenshot-slide.ios-shot { width: 210px; }
+}
+
+.hero-breadcrumb { margin-bottom: 1.25rem; }
