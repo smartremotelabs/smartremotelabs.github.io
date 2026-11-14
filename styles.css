@@ -229,11 +229,12 @@ header.scrolled {
 }
 .logo h1,
 .logo .logo-name {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
     margin: 0;
     font-family: 'Space Grotesk', sans-serif;
     font-weight: 700;
     line-height: 1.15;
+    white-space: nowrap;
 }
 .logo h1 a,
 .logo .logo-name a { color: var(--text-primary); }
